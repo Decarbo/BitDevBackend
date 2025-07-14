@@ -128,6 +128,7 @@ Create a `.env` file and add:
 DATABASE_URL=mongodb+srv://<username>:<password>@cluster0.mongodb.net/BitDev
 JWT_SECRET=your_jwt_secret
 PORT=7777
+CLIENT_ORIGIN=your frontend deploye link 
 ```
 
 ### **3️⃣ Start the Backend Server**
