@@ -8,12 +8,16 @@ const cors = require('cors');
 
 // app.use(
 //   cors({
-//     origin: "http://localhost:5173",
+//     origin: "http://localhost:5174",
 //     credentials: true,
 //   })
 // );
 
-const allowedOrigins = [process.env.CLIENT_ORIGIN, 'http://localhost:5173'];
+const allowedOrigins = [
+	process.env.CLIENT_ORIGIN,
+	'http://localhost:5173',
+	'http://localhost:5174',
+];
 
 app.use(
 	cors({
@@ -24,7 +28,7 @@ app.use(
 				callback(new Error('Not allowed by CORS'));
 			}
 		},
-		credentials: true,
+		credentials: true, // ✅ Required for cookies/auth headers
 	})
 );
 
